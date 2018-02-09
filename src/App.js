@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PopularStatsItem from './components/PopularStatsItem/PopularStatsItem';
 import CurrencyStatsItem from './components/CurrencyStatsItem/CurrencyStatsItem';
 
-
 import './App.css';
 
 class App extends Component {
@@ -38,7 +37,6 @@ class App extends Component {
     }))
     .then(jsonPromises => Promise.all(jsonPromises))
     .then(jsonResponses => {
-      // console.log('response', jsonResponses);
       this.setState({
         marketPrice: Number((Math.ceil(jsonResponses[0].market_price_usd * 1000) / 1000).toFixed(2)),
         avgBlockSize: Number(Math.max( Math.round(jsonResponses[2] * 100) / 100).toFixed(2)),
@@ -62,8 +60,6 @@ class App extends Component {
       mempoolSize,
       totalBitCoinData
     } = this.state;
-
-    // console.log('STATE', this.state);
 
     return (
       <div className="App">
@@ -114,18 +110,22 @@ class App extends Component {
             <CurrencyStatsItem
               chartData={totalBitCoinData}
               title={totalBitCoinData ? totalBitCoinData.name : null}
+              explanation={'The total number of bitcoins that have already been mined.'}
             />
 
             <CurrencyStatsItem
               title={'Market Price (USD)'}
+              explanation={'Average USD market price across major bitcoin exchanges.'}
             />
 
             <CurrencyStatsItem
               title={'Market Capitalization'}
+              explanation={'The total USD value of bitcoin supply in circulation.'}
             />
 
             <CurrencyStatsItem
-              title={'USD Exchange Trade Volume'}
+              title={'Exchange Trade Volume'}
+              explanation={'The total USD value of trading volume on major bitcoin exchanges.'}
             />
 
           </div>
