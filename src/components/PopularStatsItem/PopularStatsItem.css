@@ -1,0 +1,41 @@
+.PopularStatsItem-column {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 10px;
+  margin: 0 4px 10px 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  transition: background-color 3ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.PopularStatsItem-column:hover {
+  background-color: #e3eff5;
+  cursor: pointer;
+  box-shadow: rgba(32, 33, 36, 0.28) 0 2px 15px;
+}
+
+.PopularStatsItem-title {
+  font-size: 20px;
+  color: #004a7c;
+}
+
+.PopularStatsItem-link {
+  color: #10ADE4;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.PopularStatsItem-link .odometer {
+  font-size: 48px;
+}
+
+.PopularStatsItem-explanation {
+  font-size: 14px;
+  color: #5f5f5f;
+}
+
+@media (min-width: 992px) {
+  .PopularStatsItem-column {
+    width: 25%;
+  }
+}

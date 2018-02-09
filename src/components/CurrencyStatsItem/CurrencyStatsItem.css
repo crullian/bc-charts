@@ -1,0 +1,25 @@
+.CurrencyStatsItem-column {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 10px;
+  margin: 0 4px 10px 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  transition: background-color 3ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.CurrencyStatsItem-column:hover {
+  background-color: #e3eff5;
+  cursor: pointer;
+  box-shadow: rgba(32, 33, 36, 0.28) 0 2px 15px;
+}
+
+.CurrencyStatsItem-title {
+  font-size: 20px;
+  color: #004a7c;
+}
+
+@media (min-width: 992px) {
+  .CurrencyStatsItem-column {
+    width: 25%;
+  }
+}
